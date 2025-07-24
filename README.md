@@ -1,12 +1,61 @@
-# React + Vite
+# Escrow Courier Admin Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An admin dashboard web application for managing parcels, agents, vendors, and delivery reports. Built as part of a practical assessment, the app provides a clean, modern UI with filtering, charts, and export capabilities.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## Expanding the ESLint configuration
+### Dashboard
+- Metric cards for key stats (e.g. parcels today, pending deliveries)
+- Weekly parcel summary chart (bar chart)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###  Parcels Management
+- View all parcels in a table
+- Filter by:
+  - Status (in transit, delivered, failed)
+  - Date range
+  - Agent
+- Update parcel status
+
+### Agents Management
+- View agents
+- Activate / Deactivate agents
+- View agent delivery history (modal)
+
+### Vendor Management
+- View registered vendors
+- Approve or reject pending vendors
+- Show registration date & status
+
+### Wallet & Payouts
+- View agent wallet balances
+- Trigger payouts
+- Update last payout date and reset balance
+
+### Reports Page
+- Pie chart: delivery status breakdown
+- Line chart: daily delivery trend
+- Export data as:
+  -  CSV
+  -  PDF (via jsPDF)
+
+---
+
+## Tech Stack
+
+- **Frontend:** React + Vite
+- **Styling:** Tailwind CSS
+- **Charts:** Recharts
+- **PDF Export:** jsPDF
+- **Routing:** React Router
+
+---
+
+## Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/escrow-admin.git
+cd escrow-admin
